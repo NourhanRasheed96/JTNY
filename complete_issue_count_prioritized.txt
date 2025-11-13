@@ -1,0 +1,83 @@
+====================================================================================================
+COMPLETE ISSUE COUNT SUMMARY - PRIORITIZED STRUCTURE
+====================================================================================================
+
+Total Issues: 499
+
+
+WP1: 6 issues
+----------------------------------------------------------------------------------------------------
+  WP1.1: 2 issues
+  WP1.2: 1 issues
+  WP1.3: 1 issues
+  WP1.4: 1 issues
+  WP1.5: 1 issues
+
+WP2: 29 issues
+----------------------------------------------------------------------------------------------------
+  WP2.1: 16 issues 🔶 MEDIUM
+  WP2.2: 2 issues
+  WP2.3: 11 issues 🔶 MEDIUM
+
+WP3: 9 issues
+----------------------------------------------------------------------------------------------------
+  WP3.2: 2 issues
+  WP3.3: 2 issues
+  WP3.4: 2 issues
+  WP3.5: 3 issues
+
+WP4: 4 issues
+----------------------------------------------------------------------------------------------------
+  WP4.1: 2 issues
+  WP4.4: 1 issues
+  WP4.5: 1 issues
+
+WP5: 53 issues
+----------------------------------------------------------------------------------------------------
+  WP5.1: 10 issues
+  WP5.2: 7 issues
+  WP5.3: 10 issues
+  WP5.4: 7 issues
+  WP5.5: 9 issues
+  WP5.6: 6 issues
+  WP5.7: 4 issues
+
+WP6: 121 issues
+----------------------------------------------------------------------------------------------------
+  WP6.1: 8 issues
+  WP6.10: 4 issues
+  WP6.11: 8 issues
+  WP6.12: 4 issues
+  WP6.2: 22 issues ⚠️ LARGE - NEEDS DIVISION
+  WP6.3: 10 issues
+  WP6.4: 13 issues 🔶 MEDIUM
+  WP6.5: 6 issues
+  WP6.6: 8 issues
+  WP6.7: 9 issues
+  WP6.8: 16 issues 🔶 MEDIUM
+  WP6.9: 13 issues 🔶 MEDIUM
+
+WP7: 53 issues
+----------------------------------------------------------------------------------------------------
+  WP7.1: 9 issues
+  WP7.2: 16 issues 🔶 MEDIUM
+  WP7.3: 5 issues
+  WP7.4: 5 issues
+  WP7.5: 6 issues
+  WP7.6: 6 issues
+  WP7.7: 6 issues
+
+WP8: 204 issues
+----------------------------------------------------------------------------------------------------
+  WP8.1: 18 issues 🔶 MEDIUM
+  WP8.10: 25 issues ⚠️ LARGE - NEEDS DIVISION
+  WP8.11: 7 issues
+  WP8.12: 4 issues
+  WP8.2: 16 issues 🔶 MEDIUM
+  WP8.3: 27 issues ⚠️ LARGE - NEEDS DIVISION
+  WP8.4: 26 issues ⚠️ LARGE - NEEDS DIVISION
+  WP8.5: 20 issues 🔶 MEDIUM
+  WP8.6: 18 issues 🔶 MEDIUM
+  WP8.7: 16 issues 🔶 MEDIUM
+  WP8.8: 4 issues
+  WP8.9: 23 issues ⚠️ LARGE - NEEDS DIVISION

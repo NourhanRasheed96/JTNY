@@ -1,0 +1,139 @@
+====================================================================================================
+SUB-WORK PACKAGE ISSUE COUNT ANALYSIS
+====================================================================================================
+
+WP1: Critical Security & Infrastructure -> 1.1: 8 issues ⚠️ LARGE - NEEDS DIVISION
+WP1: Critical Security & Infrastructure -> 1.2: 7 issues ⚠️ LARGE - NEEDS DIVISION
+WP1: Critical Security & Infrastructure -> 1.3: 7 issues ⚠️ LARGE - NEEDS DIVISION
+WP1: Critical Security & Infrastructure -> 1.4: 2 issues
+WP1: Critical Security & Infrastructure -> 1.5: 2 issues
+WP2: Framework Upgrades & Core Performance -> 2.1: 2 issues
+WP2: Framework Upgrades & Core Performance -> 2.2: 4 issues
+WP2: Framework Upgrades & Core Performance -> 2.4: 2 issues
+WP2: Framework Upgrades & Core Performance -> 2.5: 3 issues
+
+Total issues tracked in Planning sheet: 37
+
+
+====================================================================================================
+SUGGESTED DIVISIONS FOR LARGE SUB-WORK PACKAGES
+====================================================================================================
+
+
+====================================================================================================
+WP1: Critical Security & Infrastructure -> 1.1 (8 issues)
+====================================================================================================
+
+Original Description: 1.1- Fix all hardcoded credentials and clean Git history
+
+Current Issues (8 total):
+  - SEC-001: Hardcoded MongoDB Credentials...
+  - SEC-004: Google Maps API Key Hardcoded...
+  - SEC-005: Permissive CORS Configuration...
+  - SEC-017: No Secrets Management Solution...
+  - SEC-023: Weak Password Policy...
+  - AWS-010: Security risk: port 22 (SSH) is open to the world on most EC2 instances....
+  - AWS-019: CloudTrail management events disabled...
+  - AWS-029: Application Load Balancer Security Group Misconfiguration...
+
+----------------------------------------------------------------------------------------------------
+SUGGESTED DIVISION:
+----------------------------------------------------------------------------------------------------
+
+1.1.a - Git History & Credentials Cleanup (3 issues)
+  - SEC-001: Hardcoded MongoDB Credentials
+  - SEC-017: No Secrets Management Solution
+  - SEC-023: Weak Password Policy
+
+1.1.b - API Key Management (1 issue)
+  - SEC-004: Google Maps API Key Hardcoded
+
+1.1.c - CORS & Network Configuration (1 issue)
+  - SEC-005: Permissive CORS Configuration
+
+1.1.d - AWS Security Infrastructure (3 issues)
+  - AWS-010: Security risk: port 22 (SSH) is open to the world
+  - AWS-019: CloudTrail management events disabled
+  - AWS-029: Application Load Balancer Security Group Misconfiguration
+
+Benefits of Division:
+  ✓ More focused and manageable tasks
+  ✓ Can be assigned to different team members in parallel
+  ✓ Easier to track progress and estimate time
+  ✓ Related issues grouped together for better context
+
+====================================================================================================
+WP1: Critical Security & Infrastructure -> 1.2 (7 issues)
+====================================================================================================
+
+Original Description: 1.2- Rotate all API keys and secrets
+
+Current Issues (7 total):
+  - SEC-002: Exposed AWS Access Keys...
+  - SEC-011: Missing Security Headers...
+  - SEC-012: Insufficient Input Validation...
+  - SEC-014: Debug Mode Enabled...
+  - SEC-015: Insufficient Logging and Monitoring...
+  - SEC-016: No Web Application Firewall...
+  - AWS-022: MFA and key rotation gaps in IAM users...
+
+----------------------------------------------------------------------------------------------------
+SUGGESTED DIVISION:
+----------------------------------------------------------------------------------------------------
+
+1.2.a - AWS & Cloud Credentials (2 issues)
+  - SEC-002: Exposed AWS Access Keys
+  - AWS-022: MFA and key rotation gaps in IAM users
+
+1.2.b - Security Headers & Input Validation (2 issues)
+  - SEC-011: Missing Security Headers
+  - SEC-012: Insufficient Input Validation
+
+1.2.c - Logging, Monitoring & WAF (3 issues)
+  - SEC-014: Debug Mode Enabled
+  - SEC-015: Insufficient Logging and Monitoring
+  - SEC-016: No Web Application Firewall
+
+Benefits of Division:
+  ✓ More focused and manageable tasks
+  ✓ Can be assigned to different team members in parallel
+  ✓ Easier to track progress and estimate time
+  ✓ Related issues grouped together for better context
+
+====================================================================================================
+WP1: Critical Security & Infrastructure -> 1.3 (7 issues)
+====================================================================================================
+
+Original Description: 1.3- Configure CORS properly
+
+Current Issues (7 total):
+  - SEC-018: No API Versioning...
+  - SEC-019: No SSL Certificate Pinning...
+  - SEC-020: No Root/Jailbreak Detection...
+  - SEC-021: Insufficient File Upload Validation...
+  - SEC-025: No Database Query Optimization...
+  - SEC-026: No Content Security for Stored Files...
+  - AWS-026: Application Load Balancers serving HTTP health checks...
+
+----------------------------------------------------------------------------------------------------
+SUGGESTED DIVISION:
+----------------------------------------------------------------------------------------------------
+
+1.3.a - API Security & Versioning (2 issues)
+  - SEC-018: No API Versioning
+  - AWS-026: Application Load Balancers serving HTTP health checks
+
+1.3.b - Mobile App Security (2 issues)
+  - SEC-019: No SSL Certificate Pinning
+  - SEC-020: No Root/Jailbreak Detection
+
+1.3.c - File Upload & Database Security (3 issues)
+  - SEC-021: Insufficient File Upload Validation
+  - SEC-025: No Database Query Optimization
+  - SEC-026: No Content Security for Stored Files
+
+Benefits of Division:
+  ✓ More focused and manageable tasks
+  ✓ Can be assigned to different team members in parallel
+  ✓ Easier to track progress and estimate time
+  ✓ Related issues grouped together for better context

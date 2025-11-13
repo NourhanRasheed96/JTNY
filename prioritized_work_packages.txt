@@ -1,0 +1,548 @@
+====================================================================================================
+PRIORITIZED WORK PACKAGE STRUCTURE
+Based on Severity, Impact, and Logical Dependencies
+====================================================================================================
+
+Total Issues Analyzed: 499
+
+
+====================================================================================================
+WP1: Critical Security Remediation (IMMEDIATE)
+Priority: P0 - CRITICAL
+====================================================================================================
+Rationale: Active security vulnerabilities with potential for data breach, financial loss, or system compromise
+
+Total Issues: 6
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP1.1: Clean Git History & Remove Hardcoded Credentials
+    Issues: 2
+    Severity: CRITICAL: 2
+    Examples:
+      1. [CRITICAL] SEC-002: Exposed AWS Access Keys...
+      2. [CRITICAL] SEC-003: Firebase Cloud Messaging Token Exposed...
+
+  WP1.2: Rotate AWS Keys, Firebase Tokens & API Keys
+    Issues: 1
+    Severity: CRITICAL: 1
+    Examples:
+      1. [CRITICAL] SEC-004: Google Maps API Key Hardcoded...
+
+  WP1.3: Fix CORS Configuration
+    Issues: 1
+    Severity: CRITICAL: 1
+    Examples:
+      1. [CRITICAL] SEC-005: Permissive CORS Configuration...
+
+  WP1.4: Implement Rate Limiting
+    Issues: 1
+    Severity: CRITICAL: 1
+    Examples:
+      1. [CRITICAL] SEC-006: Ineffective Rate Limiting...
+
+  WP1.5: Other Critical Security Issues
+    Issues: 1
+    Severity: CRITICAL: 1
+    Examples:
+      1. [CRITICAL] SEC-001: Hardcoded MongoDB Credentials...
+
+====================================================================================================
+WP2: AWS Security & Cost Optimization (URGENT)
+Priority: P0 - CRITICAL
+====================================================================================================
+Rationale: Prevent unauthorized access, reduce financial exposure from AWS misconfigurations
+
+Total Issues: 29
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP2.1: AWS Security Hardening (IAM, Security Groups, CloudTrail)
+    Issues: 16 🔶 MEDIUM
+    Severity: CRITICAL: 13, HIGH: 3
+    Examples:
+      1. [CRITICAL] AWS-001: The EC2 instance i-01d9d8b30a74fae1b (mobile) is over p...
+      2. [CRITICAL] AWS-002: The EC2 instance i-0eb1bbd45ea19979e (live2) is over pr...
+      3. [CRITICAL] AWS-003: The EC2 instance i-0e935890cfd61f7c0 (live) is mis-size...
+      ... and 13 more
+
+  WP2.2: AWS Cost Optimization (EC2, EBS, RDS)
+    Issues: 4
+    Severity: HIGH: 1, MEDIUM: 3
+    Examples:
+      1. [HIGH] AWS-012: AWS Cost Optimization Hub is disabled....
+      2. [MEDIUM] AWS-021: Unmanaged EBS/RDS snapshot lifecycle...
+      3. [MEDIUM] AWS-024: Underutilized Amazon EBS volumes...
+      ... and 1 more
+
+  WP2.3: Other AWS Improvements
+    Issues: 9
+    Severity: HIGH: 6, LOW: 1, MEDIUM: 2
+    Examples:
+      1. [HIGH] AWS-013: HTTP port 80 is open, allowing unencrypted public acces...
+      2. [HIGH] AWS-014: Low and inconsistent network activity indicates over-pr...
+      3. [HIGH] AWS-015: CPU utilization stays mostly under 10%....
+      ... and 6 more
+
+====================================================================================================
+WP3: Framework Upgrades & Database Foundation (HIGH)
+Priority: P1 - HIGH
+====================================================================================================
+Rationale: Enables other improvements, fixes critical performance bottlenecks, required for security patches
+
+Total Issues: 9
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP3.2: Implement Database Connection Pooling
+    Issues: 2
+    Severity: CRITICAL: 1, MEDIUM: 1
+    Examples:
+      1. [CRITICAL] PERF-DB-002: Missing Database Connection Pooling...
+      2. [MEDIUM] PERF-MB-015: No Database Connection Pooling...
+
+  WP3.3: Add Critical Database Indexes
+    Issues: 2
+    Severity: CRITICAL: 1, HIGH: 1
+    Examples:
+      1. [HIGH] PERF-DB-013: Missing Indexes on Frequently Queried Fields...
+      2. [CRITICAL] PERF-MB-002: Missing Database Indexes...
+
+  WP3.4: Fix Critical N+1 Queries
+    Issues: 2
+    Severity: CRITICAL: 1, HIGH: 1
+    Examples:
+      1. [CRITICAL] PERF-DB-003: N+1 Query in Account Serializer...
+      2. [HIGH] PERF-MB-003: N+1 in Driver Transactions...
+
+  WP3.5: Implement Pagination Improvements
+    Issues: 3
+    Severity: CRITICAL: 2, HIGH: 1
+    Examples:
+      1. [CRITICAL] PERF-DB-004: Massive Aggregation Without Pagination...
+      2. [CRITICAL] PERF-DB-005: Inefficient Driver Pagination...
+      3. [HIGH] PERF-MP-011: No Pagination in Trip History...
+
+====================================================================================================
+WP4: Authentication & Session Security (HIGH)
+Priority: P1 - HIGH
+====================================================================================================
+Rationale: Protect user accounts and prevent session hijacking
+
+Total Issues: 4
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP4.1: Token Lifecycle Management (Access + Refresh Tokens)
+    Issues: 1
+    Severity: HIGH: 1
+    Examples:
+      1. [HIGH] SEC-007: Excessive Token Lifetime...
+
+  WP4.2: Secure Session Storage (httpOnly Cookies)
+    Issues: 1
+    Severity: HIGH: 1
+    Examples:
+      1. [HIGH] SEC-008: Authentication Tokens in localStorage...
+
+  WP4.4: Multi-Factor Authentication
+    Issues: 1
+    Severity: HIGH: 1
+    Examples:
+      1. [HIGH] SEC-009: No Multi-Factor Authentication...
+
+  WP4.5: Other Authentication Security
+    Issues: 1
+    Severity: HIGH: 1
+    Examples:
+      1. [HIGH] SEC-013: Excessive OTP Validity Period...
+
+====================================================================================================
+WP5: Critical Performance Issues (HIGH)
+Priority: P1 - HIGH
+====================================================================================================
+Rationale: Resolve performance issues causing user impact and system instability
+
+Total Issues: 53
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP5.1: Dashboard Backend - Critical Performance
+    Issues: 10
+    Severity: CRITICAL: 2, HIGH: 8
+    Examples:
+      1. [CRITICAL] PERF-DB-006: Missing Caching Layer...
+      2. [HIGH] PERF-DB-007: Synchronous File Upload in Request...
+      3. [HIGH] PERF-DB-008: No Celery for Heavy Operations...
+      ... and 7 more
+
+  WP5.2: Mobile Backend - Critical Performance
+    Issues: 7
+    Severity: CRITICAL: 1, HIGH: 6
+    Examples:
+      1. [CRITICAL] PERF-MB-001: Blocking Synchronous Trip Assignment Loop...
+      2. [HIGH] PERF-MB-004: Inefficient Driver Geographic Search...
+      3. [HIGH] PERF-MB-005: Duplicate FirebaseStorageProvider...
+      ... and 4 more
+
+  WP5.3: Dashboard Frontend - Critical Performance
+    Issues: 10
+    Severity: CRITICAL: 2, HIGH: 8
+    Examples:
+      1. [HIGH] PERF-DF-001: Insufficient Code Splitting...
+      2. [HIGH] PERF-DF-002: Heavy Dependencies...
+      3. [CRITICAL] PERF-DF-003: No Lazy Loading for Routes...
+      ... and 7 more
+
+  WP5.4: Mobile Passenger - Critical Performance
+    Issues: 7
+    Severity: CRITICAL: 1, HIGH: 6
+    Examples:
+      1. [CRITICAL] PERF-MP-001: Too Many Root Providers...
+      2. [HIGH] PERF-MP-002: Duplicate FirebaseStorageProvider...
+      3. [HIGH] PERF-MP-003: Missing const Constructors...
+      ... and 4 more
+
+  WP5.5: Mobile Driver - Critical Performance
+    Issues: 9
+    Severity: CRITICAL: 2, HIGH: 7
+    Examples:
+      1. [CRITICAL] PERF-MD-001: MapProvider Eager Initialization...
+      2. [HIGH] PERF-MD-002: 14 Root ChangeNotifierProviders...
+      3. [HIGH] PERF-MD-003: Firebase Persistence Disabled...
+      ... and 6 more
+
+  WP5.6: Sharapp - Critical Performance
+    Issues: 6
+    Severity: CRITICAL: 2, HIGH: 4
+    Examples:
+      1. [CRITICAL] PERF-SA-001: No Loading States...
+      2. [CRITICAL] PERF-SA-002: Firebase Listener Memory Leak...
+      3. [HIGH] PERF-SA-003: Google Maps Re-initialization...
+      ... and 3 more
+
+  WP5.7: Cross-Repo Critical Performance
+    Issues: 4
+    Severity: CRITICAL: 2, HIGH: 2
+    Examples:
+      1. [CRITICAL] PERF-CR-001: No API Rate Limiting...
+      2. [CRITICAL] PERF-CR-002: Firebase Cost Risk...
+      3. [HIGH] PERF-CR-003: No Global Caching Strategy...
+      ... and 1 more
+
+====================================================================================================
+WP6: Critical UI/UX & User-Facing Bugs (MEDIUM)
+Priority: P2 - MEDIUM
+====================================================================================================
+Rationale: Fix issues directly impacting user experience and causing user complaints
+
+Total Issues: 121
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP6.1: Sharapp - Critical UI/UX
+    Issues: 8
+    Severity: CRITICAL: 1, HIGH: 7
+    Examples:
+      1. [CRITICAL] UIUX-SA-001: Trip info cards overflow viewport...
+      2. [HIGH] UIUX-SA-002: Missing Loading States for Payment Link Creation...
+      3. [HIGH] UIUX-SA-003: Missing rel Attributes on External Links...
+      ... and 5 more
+
+  WP6.10: Dashboard Frontend - Critical Bugs
+    Issues: 4
+    Severity: HIGH: 4
+    Examples:
+      1. [HIGH] BUGS-DF-001: No Error Boundary Implementation...
+      2. [HIGH] BUGS-DF-002: Race Condition in Chat Message Loading...
+      3. [HIGH] BUGS-DF-003: Memory Leak: Event Listeners Not Cleaned Up...
+      ... and 1 more
+
+  WP6.11: Dashboard Backend - Critical Bugs
+    Issues: 8
+    Severity: CRITICAL: 2, HIGH: 6
+    Examples:
+      1. [CRITICAL] BUGS-DB-001: Firebase Private Key Exposed...
+      2. [CRITICAL] BUGS-DB-002: DEBUG Mode Enabled in Dev...
+      3. [HIGH] BUGS-DB-003: Weak Password Policy...
+      ... and 5 more
+
+  WP6.12: Mobile Backend - Critical Bugs
+    Issues: 4
+    Severity: CRITICAL: 1, HIGH: 3
+    Examples:
+      1. [CRITICAL] BUGS-MB-001: TripDrivePassengerView Is World-Readable...
+      2. [HIGH] BUGS-MB-002: Legacy settings.py.save Leaks SECRET_KEY and Debug Defa...
+      3. [HIGH] BUGS-MB-003: Driver Phone Verification Endpoint Enables Enumeration ...
+      ... and 1 more
+
+  WP6.2: Mobile Driver - Critical UI/UX
+    Issues: 22 ⚠️ LARGE
+    Severity: CRITICAL: 1, HIGH: 21
+    Examples:
+      1. [CRITICAL] UIUX-MD-001: Map controls overlap trip info...
+      2. [HIGH] UIUX-MD-002: Advertisement carousel never reaches last slide & leaks...
+      3. [HIGH] UIUX-MD-003: Trip type displays placeholder text...
+      ... and 19 more
+
+  WP6.3: Mobile Passenger - Critical UI/UX
+    Issues: 10
+    Severity: CRITICAL: 2, HIGH: 8
+    Examples:
+      1. [CRITICAL] UIUX-MP-001: Map search bar covers location pin...
+      2. [CRITICAL] UIUX-MP-002: Stuck in loading screen...
+      3. [HIGH] UIUX-MP-003: Hardcoded Serving Areas Instead of API Response...
+      ... and 7 more
+
+  WP6.4: Dashboard Frontend - Critical UI/UX
+    Issues: 13 🔶 MEDIUM
+    Severity: CRITICAL: 1, HIGH: 12
+    Examples:
+      1. [CRITICAL] UIUX-DF-001: Mobile view completely broken...
+      2. [HIGH] UIUX-DF-002: No Code Splitting for Routes...
+      3. [HIGH] UIUX-DF-003: Missing React.memo on Frequently Re-rendered Components...
+      ... and 10 more
+
+  WP6.5: Dashboard Backend - Critical UI/UX
+    Issues: 6
+    Severity: HIGH: 6
+    Examples:
+      1. [HIGH] UIUX-DB-001: Driver pagination allows unbounded limit...
+      2. [HIGH] UIUX-DB-002: GarageTrips endpoint lacks pagination...
+      3. [HIGH] UIUX-DB-003: Transaction claim endpoint responds with plain OK...
+      ... and 3 more
+
+  WP6.6: Mobile Backend - Critical UI/UX
+    Issues: 8
+    Severity: HIGH: 8
+    Examples:
+      1. [HIGH] UIUX-MB-001: Payment page renders an empty layout before the checkou...
+      2. [HIGH] UIUX-MB-002: Checkout page missing viewport meta...
+      3. [HIGH] UIUX-MB-003: Hosted checkout offers no visible cancel/back affordanc...
+      ... and 5 more
+
+  WP6.7: Sharapp - Critical Bugs
+    Issues: 9
+    Severity: CRITICAL: 5, HIGH: 4
+    Examples:
+      1. [CRITICAL] BUGS-SA-001: Missing Dependencies in Package.json...
+      2. [CRITICAL] BUGS-SA-002: Unsafe Type Assertion with Non-null Assertion Operator...
+      3. [CRITICAL] BUGS-SA-003: Unhandled Promise Rejection in Geocoder...
+      ... and 6 more
+
+  WP6.8: Mobile Driver - Critical Bugs
+    Issues: 16 🔶 MEDIUM
+    Severity: CRITICAL: 1, HIGH: 15
+    Examples:
+      1. [CRITICAL] BUGS-MD-001: Race condition in Firebase user data initialization...
+      2. [HIGH] BUGS-MD-002: Background push handler never processes payload...
+      3. [HIGH] BUGS-MD-003: Notification listeners multiply on every tap...
+      ... and 13 more
+
+  WP6.9: Mobile Passenger - Critical Bugs
+    Issues: 13 🔶 MEDIUM
+    Severity: CRITICAL: 3, HIGH: 10
+    Examples:
+      1. [CRITICAL] BUGS-MP-001: Missing Error Handling in API Helper...
+      2. [CRITICAL] BUGS-MP-002: Potential setState After Dispose...
+      3. [CRITICAL] BUGS-MP-003: Duplicate Provider Registration...
+      ... and 10 more
+
+====================================================================================================
+WP7: Medium/Low Security & Performance (MEDIUM)
+Priority: P2 - MEDIUM
+====================================================================================================
+Rationale: Address remaining security and performance issues
+
+Total Issues: 53
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP7.1: Medium/Low Security Issues
+    Issues: 9
+    Severity: MEDIUM: 9
+    Examples:
+      1. [MEDIUM] SEC-018: No API Versioning...
+      2. [MEDIUM] SEC-019: No SSL Certificate Pinning...
+      3. [MEDIUM] SEC-020: No Root/Jailbreak Detection...
+      ... and 6 more
+
+  WP7.2: Dashboard Backend - Medium/Low Performance
+    Issues: 16 🔶 MEDIUM
+    Severity: LOW: 4, MEDIUM: 12
+    Examples:
+      1. [MEDIUM] PERF-DB-001: No Database Query Optimization...
+      2. [MEDIUM] PERF-DB-014: No Response Compression...
+      3. [MEDIUM] PERF-DB-015: Missing Query Result Caching...
+      ... and 13 more
+
+  WP7.3: Mobile Backend - Medium/Low Performance
+    Issues: 5
+    Severity: MEDIUM: 5
+    Examples:
+      1. [MEDIUM] PERF-MB-006: Inefficient Promo Code Validation...
+      2. [MEDIUM] PERF-MB-007: Redundant Trip Fetching in Celery...
+      3. [MEDIUM] PERF-MB-008: No Caching for Country Settings...
+      ... and 2 more
+
+  WP7.4: Dashboard Frontend - Medium/Low Performance
+    Issues: 5
+    Severity: LOW: 1, MEDIUM: 4
+    Examples:
+      1. [MEDIUM] PERF-DF-008: QueryClient Default Config...
+      2. [MEDIUM] PERF-DF-010: Firebase Listeners Without Cleanup...
+      3. [MEDIUM] PERF-DF-012: No Image Optimization...
+      ... and 2 more
+
+  WP7.5: Mobile Passenger - Medium/Low Performance
+    Issues: 6
+    Severity: MEDIUM: 6
+    Examples:
+      1. [MEDIUM] PERF-MP-004: Synchronous Hive Initialization...
+      2. [MEDIUM] PERF-MP-006: Heavy Dependencies...
+      3. [MEDIUM] PERF-MP-008: Multiple Location Services...
+      ... and 3 more
+
+  WP7.6: Mobile Driver - Medium/Low Performance
+    Issues: 6
+    Severity: LOW: 1, MEDIUM: 5
+    Examples:
+      1. [MEDIUM] PERF-MD-004: Synchronous Wakelock in Main...
+      2. [MEDIUM] PERF-MD-006: Audio Player Resource Leak...
+      3. [MEDIUM] PERF-MD-008: Google MLKit Text Recognition...
+      ... and 3 more
+
+  WP7.7: Sharapp - Medium/Low Performance
+    Issues: 6
+    Severity: LOW: 3, MEDIUM: 3
+    Examples:
+      1. [MEDIUM] PERF-SA-007: Firebase Bundle Not Optimized...
+      2. [MEDIUM] PERF-SA-008: Map Loads Unnecessarily...
+      3. [MEDIUM] PERF-SA-009: No Request Debouncing...
+      ... and 3 more
+
+====================================================================================================
+WP8: UI/UX Improvements & Non-Critical Bugs (LOW)
+Priority: P3 - LOW
+====================================================================================================
+Rationale: Polish user experience and code quality
+
+Total Issues: 204
+
+Sub-Work Packages:
+----------------------------------------------------------------------------------------------------
+
+  WP8.1: Sharapp - Medium/Low UI/UX
+    Issues: 18 🔶 MEDIUM
+    Severity: LOW: 9, MEDIUM: 9
+    Examples:
+      1. [MEDIUM] UIUX-SA-009: Poor Responsive Design for Map Height...
+      2. [MEDIUM] UIUX-SA-010: Inconsistent Spacing and Padding...
+      3. [MEDIUM] UIUX-SA-011: No keyboard shortcuts...
+      ... and 15 more
+
+  WP8.10: Dashboard Frontend - Medium/Low Bugs
+    Issues: 25 ⚠️ LARGE
+    Severity: LOW: 11, MEDIUM: 14
+    Examples:
+      1. [MEDIUM] BUGS-DF-005: Insecure Password Reset Flow...
+      2. [MEDIUM] BUGS-DF-006: Weak Password Requirements...
+      3. [MEDIUM] BUGS-DF-007: No CSRF Protection Visible...
+      ... and 22 more
+
+  WP8.11: Dashboard Backend - Medium/Low Bugs
+    Issues: 7
+    Severity: LOW: 2, MEDIUM: 5
+    Examples:
+      1. [MEDIUM] BUGS-DB-009: Missing Audit Logging for Sensitive Operations...
+      2. [MEDIUM] BUGS-DB-010: Missing Request Size Limits...
+      3. [MEDIUM] BUGS-DB-011: Commented Out Code...
+      ... and 4 more
+
+  WP8.12: Mobile Backend - Medium/Low Bugs
+    Issues: 4
+    Severity: MEDIUM: 4
+    Examples:
+      1. [MEDIUM] BUGS-MB-005: Throttle Rates Set to 1000/min anon and 5000/sec user...
+      2. [MEDIUM] BUGS-MB-006: Payment Callback Endpoints Dump Query Strings to Logs...
+      3. [MEDIUM] BUGS-MB-007: Trip Creation Busy-Waits on Cache Without Timeout...
+      ... and 1 more
+
+  WP8.2: Mobile Driver - Medium/Low UI/UX
+    Issues: 16 🔶 MEDIUM
+    Severity: LOW: 5, MEDIUM: 11
+    Examples:
+      1. [MEDIUM] UIUX-MD-023: Missing empty states in wallet and trip history screens...
+      2. [MEDIUM] UIUX-MD-024: No visual indication of trip request timeout countdown...
+      3. [MEDIUM] UIUX-MD-025: Text too small for driving...
+      ... and 13 more
+
+  WP8.3: Mobile Passenger - Medium/Low UI/UX
+    Issues: 27 ⚠️ LARGE
+    Severity: LOW: 19, MEDIUM: 8
+    Examples:
+      1. [MEDIUM] UIUX-MP-011: Lack of Const Constructors Missing `const` Keywords on ...
+      2. [MEDIUM] UIUX-MP-012: Hardcoded Strings Not Using Localization...
+      3. [MEDIUM] UIUX-MP-013: Misaligned car class images...
+      ... and 24 more
+
+  WP8.4: Dashboard Frontend - Medium/Low UI/UX
+    Issues: 26 ⚠️ LARGE
+    Severity: LOW: 6, MEDIUM: 20
+    Examples:
+      1. [MEDIUM] UIUX-DF-014: No Aria Labels on Interactive Elements...
+      2. [MEDIUM] UIUX-DF-015: Missing Alt Text on Images...
+      3. [MEDIUM] UIUX-DF-016: No Focus Management After Modal Close...
+      ... and 23 more
+
+  WP8.5: Dashboard Backend - Medium/Low UI/UX
+    Issues: 20 🔶 MEDIUM
+    Severity: LOW: 6, MEDIUM: 14
+    Examples:
+      1. [MEDIUM] UIUX-DB-007: Driver pagination returns nested car/account blocks tha...
+      2. [MEDIUM] UIUX-DB-008: Passenger pagination omits total counts so grid height ...
+      3. [MEDIUM] UIUX-DB-009: Passenger pagination performs expensive regex on phone ...
+      ... and 17 more
+
+  WP8.6: Mobile Backend - Medium/Low UI/UX
+    Issues: 18 🔶 MEDIUM
+    Severity: LOW: 4, MEDIUM: 14
+    Examples:
+      1. [MEDIUM] UIUX-MB-009: No document title or branding on checkout page...
+      2. [MEDIUM] UIUX-MB-010: OTP email locked to 600px with no media queries...
+      3. [MEDIUM] UIUX-MB-011: OTP email uses generic blue palette...
+      ... and 15 more
+
+  WP8.7: Sharapp - Medium/Low Bugs
+    Issues: 16 🔶 MEDIUM
+    Severity: LOW: 11, MEDIUM: 5
+    Examples:
+      1. [MEDIUM] BUGS-SA-010: Weak Key Generation in Lists...
+      2. [MEDIUM] BUGS-SA-011: Missing TypeScript Strict Mode Enforcement...
+      3. [MEDIUM] BUGS-SA-012: React Query Cache Not Parameterized by Trip Inputs...
+      ... and 13 more
+
+  WP8.8: Mobile Driver - Medium/Low Bugs
+    Issues: 4
+    Severity: MEDIUM: 4
+    Examples:
+      1. [MEDIUM] BUGS-MD-017: Trip history loaders never recover from failures...
+      2. [MEDIUM] BUGS-MD-018: Transaction ID display logic will crash on short UUIDs...
+      3. [MEDIUM] BUGS-MD-019: Memory leak from Timer in advertisement widget...
+      ... and 1 more
+
+  WP8.9: Mobile Passenger - Medium/Low Bugs
+    Issues: 23 ⚠️ LARGE
+    Severity: LOW: 10, MEDIUM: 13
+    Examples:
+      1. [MEDIUM] BUGS-MP-014: Multiple TODO Comments Left in Production Code Incomple...
+      2. [MEDIUM] BUGS-MP-015: Commented Out Code Blocks Large Blocks of Commented Cod...
+      3. [MEDIUM] BUGS-MP-016: Magic Numbers Throughout Codebase Hardcoded Numeric Val...
+      ... and 20 more

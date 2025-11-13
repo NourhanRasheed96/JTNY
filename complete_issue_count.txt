@@ -1,0 +1,39 @@
+====================================================================================================
+COMPLETE SUB-WORK PACKAGE ISSUE COUNT ANALYSIS
+Total Issues: 499
+====================================================================================================
+
+Other: 17 issues 🔶 MEDIUM
+WP1.1: 14 issues 🔶 MEDIUM
+WP1.2: 4 issues
+WP1.3: 6 issues
+WP1.4: 5 issues
+WP1.5: 4 issues
+WP2.1: 2 issues
+WP2.2: 2 issues
+WP2.3: 11 issues 🔶 MEDIUM
+WP2.5: 14 issues 🔶 MEDIUM
+WP2.6: 52 issues ⚠️ LARGE - NEEDS DIVISION
+WP3.1: 2 issues
+WP3.2: 3 issues
+WP3.3: 2 issues
+WP3.4: 1 issues
+WP3.5: 1 issues
+WP4.2: 1 issues
+WP4.3: 11 issues 🔶 MEDIUM
+WP4.4: 3 issues
+WP4.5: 42 issues ⚠️ LARGE - NEEDS DIVISION
+WP5.1-DB: 19 issues 🔶 MEDIUM
+WP5.1-DF: 37 issues ⚠️ LARGE - NEEDS DIVISION
+WP5.1-MB: 26 issues ⚠️ LARGE - NEEDS DIVISION
+WP5.1-MD: 35 issues ⚠️ LARGE - NEEDS DIVISION
+WP5.1-MP: 33 issues ⚠️ LARGE - NEEDS DIVISION
+WP5.1-SA: 25 issues ⚠️ LARGE - NEEDS DIVISION
+WP6.1: 17 issues 🔶 MEDIUM
+WP6.2-DB: 10 issues
+WP6.2-DF: 20 issues 🔶 MEDIUM
+WP6.2-MB: 5 issues
+WP6.2-MD: 18 issues 🔶 MEDIUM
+WP6.2-MP: 29 issues ⚠️ LARGE - NEEDS DIVISION
+WP6.2-SA: 16 issues 🔶 MEDIUM
+WP6.3: 12 issues 🔶 MEDIUM
